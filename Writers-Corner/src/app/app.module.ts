@@ -10,6 +10,7 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
 import { SignupComponent } from './signup/signup.component';
+import { BlogpageComponent } from './blogpage/blogpage.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -17,7 +18,8 @@ import { SignupComponent } from './signup/signup.component';
     BlogsComponent,
     LoginComponent,
     SignupComponent,
-    routingComponents
+    routingComponents,
+    BlogpageComponent
   ],
   imports: [
     BrowserModule,

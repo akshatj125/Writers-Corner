@@ -8,10 +8,10 @@ import { Component } from '@angular/core';
 export class BlogsComponent {
 
   public blogs=[
-    {"title":"Title1" , "desc":"Description.."},
-    {"title":"Title2" , "desc":"Description.."},
-    {"title":"Title3" , "desc":"Description.."},
-    {"title":"Title4" , "desc":"Description.."},
+    {"id":1,"title":"Title1" , "desc":"Description.."},
+    {"id":2,"title":"Title2" , "desc":"Description.."},
+    {"id":3,"title":"Title3" , "desc":"Description.."},
+    {"id":4,"title":"Title4" , "desc":"Description.."},
 
   ]
 
