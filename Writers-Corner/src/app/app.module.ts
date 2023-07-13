@@ -5,9 +5,10 @@ import { routingComponents } from './app-routing.module';
 import { HeaderComponent }  from './header/header.component'
 import { BlogsComponent } from './blogs/blogs.component';
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule} from './app-routing.module';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { LoginComponent } from './login/login.component';
     HeaderComponent,
     BlogsComponent,
     LoginComponent,
+    SignupComponent,
     routingComponents
   ],
   imports: [
