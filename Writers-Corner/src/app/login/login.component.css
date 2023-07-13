@@ -53,12 +53,17 @@
    */
 
 .login-container{
+    padding: 20px;
+    border-radius: 15px;
     width: 50%;
     text-align: center;
     margin: 5% auto;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-
    }
+
+ .login-container h1{
+    color: #22577a;
+ } 
 
 .login-container input[type = "text"]{
     width: 80%;
@@ -75,7 +80,7 @@
 
 button{
     padding: 10px 20px;
-    background-color: darkcyan;
+    background-color: #22577a;
     color: #fff;
     margin-bottom: 8px;
 }

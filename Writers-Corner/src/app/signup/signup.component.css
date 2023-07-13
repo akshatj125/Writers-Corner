@@ -74,8 +74,14 @@
   }
    */
 
+   .signup-container h1{
+    color: #22577a;
+ } 
+
 
 .signup-container{
+    padding: 20px;
+    border-radius: 15px;
     width: 50%;
     text-align: center;
     margin: 5% auto;
