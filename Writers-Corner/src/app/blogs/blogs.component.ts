@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class BlogsComponent {
 
+  public blogs=[
+    {"title":"Title1" , "desc":"Description.."},
+    {"title":"Title2" , "desc":"Description.."},
+    {"title":"Title3" , "desc":"Description.."},
+    {"title":"Title4" , "desc":"Description.."},
+
+  ]
+
 }
