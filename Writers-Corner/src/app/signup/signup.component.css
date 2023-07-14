@@ -95,7 +95,11 @@
     margin-bottom: 15px ;
 }   
 
-.signup-container  input[type = "text"]{
+.is-invalid {
+    border-color: red;
+}
+
+.signup-container input[type = "text"]{
   width: 80%;
   padding: 8px;
   margin-bottom: 15px ;
