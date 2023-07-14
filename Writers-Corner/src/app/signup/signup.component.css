@@ -89,34 +89,40 @@
 
    }
 
-.signup-container input[type = "text"]{
-    width: 80%;
-    padding: 8px;
-    margin-bottom: 15px ;
-}   
-
 .is-invalid {
-    border-color: red;
+  border: solid 1px red;
 }
 
 .signup-container input[type = "text"]{
   width: 80%;
   padding: 8px;
-  margin-bottom: 15px ;
+  margin-bottom: 15px;
+  border-radius: 8px;
 }   
 
+.invalidMessage{
+  text-align: left;
+  color: red;
+  margin-top: -15px;
+  font-size: smaller;
+  padding-left: 8.5%;
+}
 
 .signup-container input[type = "email"]{
     width: 80%;
     padding: 8px;
-    margin-bottom: 15px ;
+    margin-bottom: 15px;
+    border: solid 2px #999;
+    border-radius: 8px;
+    
 }   
-
 
 .signup-container input[type = "password"]{
     width: 80%;
     padding: 8px;
     margin-bottom: 25px;
+    border: solid 2px #999;
+    border-radius: 8px;
 
 }   
 
@@ -125,4 +131,6 @@ button{
     background-color: #22577a;
     color: #fff;
     margin-bottom: 8px;
+    border: solid 2px #999;
+    border-radius: 8px;
 }
