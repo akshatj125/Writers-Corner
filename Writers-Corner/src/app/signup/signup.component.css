@@ -90,13 +90,14 @@
    }
 
 .is-invalid {
-  border: solid 1px red;
+  border: solid 3px red !important;
 }
 
 .signup-container input[type = "text"]{
   width: 80%;
   padding: 8px;
   margin-bottom: 15px;
+  border: solid 3px #999;
   border-radius: 8px;
 }   
 
