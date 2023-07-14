@@ -86,11 +86,18 @@
 
 }   
 
+
 button{
-    padding: 10px 20px;
-    background-color: #22577a;
-    color: #fff;
-    margin-bottom: 8px;
-    border: solid 2px #999;
-    border-radius: 8px;
+  padding: 10px 20px;
+  background-color: blue;
+  color: #fff;
+  margin-bottom: 8px;
+  border: solid 2px #999;
+  border-radius: 8px;
+  cursor: not-allowed;
+}
+
+.btnEnabled{
+background-color: green !important;
+cursor: pointer !important;
 }

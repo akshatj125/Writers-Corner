@@ -18,7 +18,10 @@
       <br/>
       <input type="password" placeholder="Password" required [(ngModel)]="userdata.password"  #password="ngModel" [class.is-invalid] = "password.invalid && password.touched" name="password">
       <br/>
-      <button [disabled]="signupForm.form.invalid"  (click)="signup()" type="submit">Sign Up</button>
+      <div *ngIf="password.invalid && password.touched" class="invalidMessage">
+        Password is required
+    </div>
+      <button [disabled]="signupForm.form.invalid" [class.btnEnabled] = "signupForm.form.valid" (click)="signup()" type="submit">Sign Up</button>
     </form>
     <p class="login-link">Already have an account? <a href="/login">Login</a></p>
 </div>
