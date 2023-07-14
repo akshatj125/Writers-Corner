@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { routingComponents } from './app-routing.module';
 import { FormsModule } from '@angular/forms';
-
+import { HttpClientModule } from '@angular/common/http'
 
 import { HeaderComponent }  from './header/header.component'
 import { BlogsComponent } from './blogs/blogs.component';
@@ -26,7 +26,8 @@ import { BlogpageComponent } from './blogpage/blogpage.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
