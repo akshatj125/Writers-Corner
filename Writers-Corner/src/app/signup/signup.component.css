@@ -115,8 +115,9 @@
     width: 80%;
     padding: 8px;
     margin-bottom: 15px;
-    border: solid 2px #999;
+    border: solid 3px #999;
     border-radius: 8px;
+
     
 }   
 
@@ -124,7 +125,7 @@
     width: 80%;
     padding: 8px;
     margin-bottom: 25px;
-    border: solid 2px #999;
+    border: solid 3px #999;
     border-radius: 8px;
 
 }   
