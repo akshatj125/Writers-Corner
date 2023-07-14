@@ -73,12 +73,16 @@
     width: 80%;
     padding: 8px;
     margin-bottom: 15px ;
+    border: solid 2px #999;
+    border-radius: 8px;
 }   
 
 .login-container input[type = "password"]{
     width: 80%;
     padding: 8px;
     margin-bottom: 25px;
+    border: solid 2px #999;
+    border-radius: 8px;
 
 }   
 
@@ -87,4 +91,6 @@ button{
     background-color: #22577a;
     color: #fff;
     margin-bottom: 8px;
+    border: solid 2px #999;
+    border-radius: 8px;
 }
