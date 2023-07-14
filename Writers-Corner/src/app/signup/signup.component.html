@@ -7,6 +7,9 @@
       <input type="text" placeholder="Name" required [(ngModel)]="userdata.name" 
       #name="ngModel" [class.is-invalid] = "name.invalid && name.touched" name="name">
       <br/>
+      <div *ngIf="name.invalid && name.touched" class="invalidMessage">
+          Name is required
+      </div>
       <input type="text" placeholder="Username" required [(ngModel)]="userdata.username"  #username="ngModel" [class.is-invalid] = "username.invalid && username.touched" name="username"> 
       <br/>
       <input type="email" placeholder="Email" required [(ngModel)]="userdata.email"  #email="ngModel" [class.is-invalid] = "email.invalid && email.touched" name="email">
