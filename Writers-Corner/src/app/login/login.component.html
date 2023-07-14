@@ -2,12 +2,12 @@
     <div style="background-color: #d5c6e0" class="login-container">
         
         <h1>Login</h1>
-        <form>
+        <form #loginForm="ngForm">
           <input type="text" placeholder="Username" required [(ngModel)]="userdata.username"  #username="ngModel" [class.is-invalid] = "username.invalid && username.touched" name="username">
           <br/>
           <input type="password" placeholder="Password" required [(ngModel)]="userdata.password"  #password="ngModel" [class.is-invalid] = "password.invalid && password.touched" name="password">
           <br/>
-          <button (click)="login()" type="button">Login</button>
+          <button [disabled]="loginForm.form.invalid" [class.btnEnabled] = "loginForm.form.valid"(click)="login()" type="button">Login</button>
         </form>
         <p class="signup-link">Don't have an account? <a href="/signup">Sign up</a></p>
     </div>
