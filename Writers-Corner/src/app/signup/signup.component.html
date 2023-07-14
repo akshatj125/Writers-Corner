@@ -4,13 +4,13 @@
       <br/>
       
       <input type="text" placeholder="Name" required [(ngModel)]="userdata.name" 
-        #name="ngModel" name="name">
+      #name="ngModel" [class.is-invalid] = "name.invalid && name.touched" name="name">
       <br/>
-      <input type="text" placeholder="Username" required [(ngModel)]="userdata.username" name="username"> 
+      <input type="text" placeholder="Username" required [(ngModel)]="userdata.username"  #username="ngModel" [class.is-invalid] = "username.invalid && username.touched" name="username"> 
       <br/>
-      <input type="email" placeholder="Email" required [(ngModel)]="userdata.email" name="email">
+      <input type="email" placeholder="Email" required [(ngModel)]="userdata.email"  #email="ngModel" [class.is-invalid] = "email.invalid && email.touched" name="email">
       <br/>
-      <input type="password" placeholder="Password" required [(ngModel)]="userdata.password" name="password">
+      <input type="password" placeholder="Password" required [(ngModel)]="userdata.password"  #password="ngModel" [class.is-invalid] = "password.invalid && password.touched" name="password">
       <br/>
       <button (click)="signup()" type="submit">Sign Up</button>
     </form>

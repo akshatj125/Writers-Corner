@@ -61,6 +61,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
    }
 
+.is-invalid{
+  border-color: red;
+}   
+
  .login-container h1{
     color: #22577a;
  } 
