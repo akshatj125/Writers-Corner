@@ -1,6 +1,7 @@
 <div style="background-color: #f9dcc4;" class="signup-container">
     <h1>Create an Account</h1>
     <form #signupForm="ngForm">
+      
       <br/>
       
       <input type="text" placeholder="Name" required [(ngModel)]="userdata.name" 
@@ -12,7 +13,7 @@
       <br/>
       <input type="password" placeholder="Password" required [(ngModel)]="userdata.password"  #password="ngModel" [class.is-invalid] = "password.invalid && password.touched" name="password">
       <br/>
-      <button (click)="signup()" type="submit">Sign Up</button>
+      <button [disabled]="signupForm.form.invalid" (click)="signup()" type="submit">Sign Up</button>
     </form>
     <p class="login-link">Already have an account? <a href="/login">Login</a></p>
 </div>
