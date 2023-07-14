@@ -2,8 +2,9 @@
     <h1>Create an Account</h1>
     <form #signupForm="ngForm">
       <br/>
+      
       <input type="text" placeholder="Name" required [(ngModel)]="userdata.name" 
-      #name="ngModel" name="name">
+        #name="ngModel" name="name">
       <br/>
       <input type="text" placeholder="Username" required [(ngModel)]="userdata.username" name="username"> 
       <br/>
