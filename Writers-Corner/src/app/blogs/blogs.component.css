@@ -4,13 +4,13 @@
   }
   
   .blog-card {
-    width: 300px;
+    width: 250px;
     margin: 10px;
     padding: 20px;
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f9f9f9;
-    margin-right: 5%;
+    height: 250px;
   }
   
   .blog-title {
