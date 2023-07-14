@@ -1,11 +1,13 @@
 <div style="background-color: #f9dcc4;" class="signup-container">
     <h1>Create an Account</h1>
     <form #signupForm="ngForm">
-      
+          
       <br/>
       
       <input type="text" placeholder="Name" required [(ngModel)]="userdata.name" 
-      #name="ngModel" [class.is-invalid] = "name.invalid && name.touched" name="name">
+      #name="ngModel" [class.is-invalid] = "name.invalid && name.touched" name="name"
+      
+      >
       <br/>
       <div *ngIf="name.invalid && name.touched" class="invalidMessage">
           Name is required
@@ -20,4 +22,4 @@
     </form>
     <p class="login-link">Already have an account? <a href="/login">Login</a></p>
 </div>
-
+       

@@ -90,7 +90,7 @@
    }
 
 .is-invalid {
-  border: red;
+  border: solid 3px red !important;
 }
 
 .signup-container input[type = "text"]{
@@ -99,6 +99,8 @@
   border: solid 2px #999;
   border-radius: 8px;
   margin-bottom: 15px;
+  border: solid 3px #999;
+  border-radius: 8px;
 }   
 
 .invalidMessage{
