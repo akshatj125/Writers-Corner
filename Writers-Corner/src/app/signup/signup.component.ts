@@ -1,3 +1,4 @@
+import { JsonPipe } from '@angular/common';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,15 @@ import { Component } from '@angular/core';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+  userdata =new User("","","","")
 
+  signup(){
+    console.log(this.userdata)
+  }
+}
+
+class User{
+  constructor(public name:string,public username:string,public email:string,public password:string) {
+    
+  }
 }
