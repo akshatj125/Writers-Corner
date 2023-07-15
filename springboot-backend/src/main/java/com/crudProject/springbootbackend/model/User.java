@@ -12,8 +12,7 @@ import org.springframework.stereotype.Component;
 @Setter
 
 public class User {
-
-
+    
 //    @SequenceGenerator(
 //            name = "test",
 //            sequenceName = "test",
@@ -26,7 +25,7 @@ public class User {
 //    )
 
     @Id
-    @GeneratedValue( strategy = GenerationType)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
     private String firstname;
     private String lastname;
