@@ -32,6 +32,7 @@ public class UserController {
         System.out.println("not present..");
     }
 
+    @CrossOrigin()
     @GetMapping("/")
     public List<User> user(){
         return this.userRepository.findAll();
@@ -43,6 +44,7 @@ public class UserController {
 //        return this.userRepository.findById(id);
 //    }
 //
+    @CrossOrigin()
     @PostMapping("/user")
     public void saveUser(@RequestBody User user)
     {
@@ -51,17 +53,17 @@ public class UserController {
 
     @DeleteMapping("/user/")
     public void deleteUser(User user){
-        userRepository.deleteById(user.getId());
+        userRepository.delete(user);
     }
 
     @PutMapping("/put/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails){
         User existingUser = userRepository.findById(id).orElseThrow(()-> new IllegalStateException("User doesn't exist."));
 
-        existingUser.setFirstname(userDetails.getFirstname());
+        existingUser.setName(userDetails.getName());
         userRepository.save(existingUser);
 
-        existingUser.setLastname(userDetails.getLastname());
+        existingUser.setEmailId(userDetails.getEmailId());
         userRepository.save(existingUser);
 
         return ResponseEntity.ok(existingUser);
