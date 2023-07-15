@@ -27,35 +27,38 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
-    private String firstname;
-    private String lastname;
+    private String username;
+    private String name;
     private String emailId;
+    private String password;
 
     public User(){
 
     }
 
-    public User(long id, String firstname, String lastname,
-                String emailId) {
+    public User(long id, String username, String name,
+                String emailId, String password) {
         this.id = id;
-        this.firstname = firstname;
-        this.lastname = lastname;
+        this.username = username;
+        this.name = name;
         this.emailId = emailId;
+        this.password= password;
     }
 
-    public User(String firstname, String lastname,
-                String emailId) {
-        this.firstname = firstname;
-        this.lastname = lastname;
-        this.emailId = emailId;
-    }
 
+    public User(String username, String name,
+                String emailId, String password) {
+        this.username = username;
+        this.name = name;
+        this.emailId = emailId;
+        this.password= password;
+    }
     @Override
     public String toString() {
         return "User{" +
                 "id=" + id +
-                ", firstname='" + firstname + '\'' +
-                ", lastname='" + lastname + '\'' +
+                ", Name='" + name + '\'' +
+                ", username='" + username + '\'' +
                 ", emailId='" + emailId + '\'' +
                 '}';
     }
