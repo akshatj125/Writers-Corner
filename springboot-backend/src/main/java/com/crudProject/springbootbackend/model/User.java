@@ -26,6 +26,7 @@ public class User {
 //    )
 
     @Id
+    @GeneratedValue( strategy = GenerationType)
     private long id;
     private String firstname;
     private String lastname;
