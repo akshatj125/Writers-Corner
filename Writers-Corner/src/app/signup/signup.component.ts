@@ -26,16 +26,15 @@ export class SignupComponent {
   signup(){
     // console.log(this.userdata)
     const data = JSON.stringify(this.userdata)
-    this.http.post(this.url, data, this.headers)
-    // .subscribe(data=>{
-    //   console.log(data)
-    //})n
+    this.http.post(this.url, data, this.headers).subscribe(data=>{
+      console.log(data)
+    })
   }
 
 }
 
 class User{
-  constructor(public name:string,public username:string,public email:string,public password:string) {
+  constructor( public name:string,public username:string,public emailId:string,public password:string) {
     
   }
 }
