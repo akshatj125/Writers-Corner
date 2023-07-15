@@ -1,6 +1,6 @@
 .blog-section {
     display: flex;
-    flex-wrap: wrap;
+    overflow: auto;
   }
   
   .blog-card {
