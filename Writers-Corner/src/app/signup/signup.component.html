@@ -14,8 +14,14 @@
       </div>
       <input type="text" placeholder="Username" required [(ngModel)]="userdata.username"  #username="ngModel" [class.is-invalid] = "username.invalid && username.touched" name="username"> 
       <br/>
+      <div *ngIf="username.invalid && username.touched" class="invalidMessage">
+        Username is required
+    </div>
       <input type="email" placeholder="Email" required [(ngModel)]="userdata.emailId"  #email="ngModel" [class.is-invalid] = "email.invalid && email.touched" name="email">
       <br/>
+      <div *ngIf="email.invalid && email.touched" class="invalidMessage">
+        Email is required
+    </div>
       <input type="password" placeholder="Password" required [(ngModel)]="userdata.password"  #password="ngModel" [class.is-invalid] = "password.invalid && password.touched" name="password">
       <br/>
       <div *ngIf="password.invalid && password.touched" class="invalidMessage">
