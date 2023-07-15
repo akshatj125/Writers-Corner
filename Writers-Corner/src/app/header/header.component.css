@@ -2,6 +2,7 @@ header {
     background-color: #fff;
     padding: 20px;
     display: flex;
+  
     align-items: center;
     justify-content: space-between;
   }
@@ -62,6 +63,7 @@ a {
 .button-64:active,
 .button-64:hover {
   outline: 0;
+  color: white !important;
 }
 
 .button-64 span {
