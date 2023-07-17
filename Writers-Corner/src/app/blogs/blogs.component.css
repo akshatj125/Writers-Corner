@@ -1,16 +1,20 @@
-/* .blog-section {
-    display: flex;
-    overflow: auto;
-  } */
+  .blog-container{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 3%;
+    padding-top: 1.5%;
+    padding-bottom: 2.5%;
+    /* justify-content: space-between; */
+  }
   
   .blog-card {
-    width: 250px;
-    margin: 2%;
-    padding: 20px;
+    /* width: 8%; */
     border: 1px solid #ddd;
     border-radius: 4px;
     background-color: #f9f9f9;
-    height: 250px;
+    height: 300px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
   }
   
   .blog-title {
@@ -22,4 +26,9 @@
   .blog-description {
     font-size: 14px;
     color: #555;
+  }
+
+  button{
+    padding: 1.5%;
+    background-color: burlywood;
   }

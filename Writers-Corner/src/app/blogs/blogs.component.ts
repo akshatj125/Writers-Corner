@@ -19,12 +19,12 @@ export class BlogsComponent {
     {"id":4,"title":"Title4" , "desc":"Description.."},
 
   ]
-  x=5
+  x=9
   blogs=this.blogs1.slice(0,this.x)
 
 
   IncX(){
-    this.x+=5;
+    this.x+=9;
     this.blogs=this.blogs1.slice(0,this.x)
 
   }
