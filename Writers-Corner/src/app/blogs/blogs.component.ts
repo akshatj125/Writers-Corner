@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
 })
 export class BlogsComponent {
 
-  public blogs=[
+
+  public blogs1=[
     {"id":1,"title":"Title1" , "desc":"Description.."},
     {"id":2,"title":"Title2" , "desc":"Description.."},
     {"id":3,"title":"Title3" , "desc":"Description.."},
@@ -18,5 +19,14 @@ export class BlogsComponent {
     {"id":4,"title":"Title4" , "desc":"Description.."},
 
   ]
+  x=5
+  blogs=this.blogs1.slice(0,this.x)
+
+
+  IncX(){
+    this.x+=5;
+    this.blogs=this.blogs1.slice(0,this.x)
+
+  }
 
 }
