@@ -19,7 +19,7 @@ export class BlogsComponent {
     {"id":4,"title":"Title4" , "desc":"Description.."},
 
   ]
-  x=9
+  x=4
   blogs=this.blogs1.slice(0,this.x)
 
 
