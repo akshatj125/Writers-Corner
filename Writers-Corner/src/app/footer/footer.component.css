@@ -11,6 +11,10 @@ a{
     padding: 0 20px;
 }
 
+.leftElements{
+    margin-right: 10px;
+}
+
 .contactUs{
     float: right;
 }
