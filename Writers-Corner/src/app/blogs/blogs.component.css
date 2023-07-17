@@ -37,16 +37,30 @@
     font-family: Ubuntu;
   }
 
-  button{
+  /* button{
     padding: 2%;
     margin: auto;
     background-color: burlywood;
     margin-bottom: 4%;
     margin-top: 4%;
-  }
+  } */
 
   a{
     font-family: Ubuntu;
   }
 
 
+  .arrow-buttons {
+    /* Transparent background */
+    background-color:transparent;
+    
+    /* Size */
+    height: 25px;
+    width: 25px;
+}
+.arrow-button--b {
+  /* Edges */
+  border-bottom: 1px solid #000;
+  border-right: 1px solid #000;
+  transform: translateY(-25%) rotate(45deg);
+}
