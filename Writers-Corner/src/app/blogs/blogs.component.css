@@ -1,3 +1,7 @@
+  .blog-section{
+    
+    text-align: center;
+  }
   .blog-container{
     display: grid;
     grid-template-columns: auto auto auto;
@@ -29,6 +33,8 @@
   }
 
   button{
-    padding: 1.5%;
+    margin: auto;
     background-color: burlywood;
   }
+
+
