@@ -13,8 +13,9 @@
   border-color: red;
 }   
 
- .login-container h1{
+ .login-container{
     color: #22577a;
+    font-family: 'Ubuntu';
  } 
 
 .login-container input[type = "text"]{
@@ -40,16 +41,18 @@
 
 button{
   padding: 10px 20px;
-  background-color: blue;
+  background-color: #5d98ac ;
   color: #fff;
   margin-bottom: 8px;
   border: solid 2px #999;
   border-radius: 8px;
   cursor: not-allowed;
+  font-size: medium;
+  font-weight: bold;
 }
 
 .btnEnabled{
-background-color: green !important;
+background-color: #008CBA !important;
 cursor: pointer !important;
 }
 .invalidMessage{
@@ -58,4 +61,12 @@ cursor: pointer !important;
   margin-top: -15px;
   font-size: smaller;
   padding-left: 8.5%;
+}
+
+a:visited{
+  color: #003a61;
+}
+
+a{
+  color: #003a61;
 }

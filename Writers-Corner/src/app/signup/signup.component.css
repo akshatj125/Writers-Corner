@@ -1,6 +1,7 @@
 
-   .signup-container h1{
+   .signup-container{
     color: #22577a;
+    font-family: 'Ubuntu';
  } 
 
 
@@ -56,15 +57,25 @@
 
 button{
     padding: 10px 20px;
-    background-color: blue;
+    background-color: #c47cf7;
     color: #fff;
     margin-bottom: 8px;
     border: solid 2px #999;
     border-radius: 8px;
     cursor: not-allowed;
+    font-size: medium;
+    font-weight: bold;
 }
 
 .btnEnabled{
-  background-color: green !important;
+  background-color: #a228fa !important;
   cursor: pointer !important;
+}
+
+a:visited{
+  color: #003a61;
+}
+
+a{
+  color: #003a61;
 }

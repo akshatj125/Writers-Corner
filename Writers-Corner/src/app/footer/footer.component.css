@@ -14,8 +14,14 @@ a{
 
 .leftElements{
     margin-right: 10px;
+    font-family: 'Ubuntu';
+    font-size: medium;
+    font-weight: bolder;
 }
 
 div.contactUs{
     float: right ;
+    font-family: 'Ubuntu';
+    font-size: medium;
+    font-weight: bolder;
 }
