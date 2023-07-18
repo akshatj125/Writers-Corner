@@ -44,12 +44,25 @@ public class UserController {
 //        return this.userRepository.findById(id);
 //    }
 //
+//    @CrossOrigin()
+//    @PostMapping("/user")
+//    public void saveUser(@RequestBody User user)
+//    {
+//        userRepository.save(user);
+//    }
+
     @CrossOrigin()
     @PostMapping("/user")
-    public void saveUser(@RequestBody User user)
-    {
-        userRepository.save(user);
+    public boolean saveUser(@RequestBody User user) {
+        Optional<User> userExists = this.userRepository.findByUsername(user.getUsername());
+        if(userExists.isPresent()) {
+            System.out.println("user is present " + userExists.get());
+            return false;
+        }
+        this.userRepository.save(user);
+        return true;
     }
+
 
     @DeleteMapping("/user/{id}")
     public void deleteUserById(@PathVariable("id") Long id){
