@@ -17,7 +17,12 @@
       <br/>
       <div *ngIf="username.invalid && username.touched" class="invalidMessage">
         Username is required
-    </div>
+      </div>
+
+      <div *ngIf="usernameExists" class="invalidMessage">
+        Username is already taken
+      </div>
+
       <input type="email" placeholder="Email" required [(ngModel)]="userdata.emailId"  #email="ngModel" [class.is-invalid] = "email.invalid && email.touched" name="email">
       <br/>
       <div *ngIf="email.invalid && email.touched" class="invalidMessage">

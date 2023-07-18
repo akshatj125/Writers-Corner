@@ -69,6 +69,11 @@ public class UserController {
         userRepository.deleteById(id);
     }
 
+    @DeleteMapping("/user/")
+    public void deleteAll(){
+        userRepository.deleteAll();
+    }
+
     @PutMapping("/put/{id}")
     public ResponseEntity<User> updateUser(@PathVariable Long id, @RequestBody User userDetails){
         User existingUser = userRepository.findById(id).orElseThrow(()-> new IllegalStateException("User doesn't exist."));

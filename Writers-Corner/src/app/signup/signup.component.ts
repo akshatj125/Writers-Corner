@@ -10,6 +10,8 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class SignupComponent {
   userdata =new User("","","","")
 
+  usernameExists= false
+
   data:any;
 
   private url = "http://localhost:8080/user";
@@ -26,6 +28,7 @@ export class SignupComponent {
   signup(){
     // console.log(this.userdata)
     const data = JSON.stringify(this.userdata)
+    const usernameTaken = false;
     this.http.post(this.url, data, this.headers).subscribe(data=>{
       console.log(data)
     })
