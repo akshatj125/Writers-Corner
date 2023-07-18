@@ -8,6 +8,10 @@
             <button class="button-64" role="button"><span class="text">LOGIN</span></button>
         </a> 
     </div>
+
+    <div *ngIf="LoggedIn">
+        {{username}}
+    </div>
 </header>
 
   <!-- Rest of your website content here -->
