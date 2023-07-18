@@ -6,12 +6,13 @@
       <a href="/blogs/{{blog.id}}" class="read-more">Read More</a>
     </div>
   </div>
-  <br/>
-  <br/>
-  <button class="arrow-buttons" (click)="IncX()">
+  
+  
+  <button *ngIf="isMoreAvailable" class="arrow-buttons" (click)="IncX()">
     <div class="arrow-buttons arrow-button--b"></div>
   
-</button>
-  <app-footer></app-footer>
+  </button>
+  
+  <app-footer class="footer"></app-footer>
 
 </div>
