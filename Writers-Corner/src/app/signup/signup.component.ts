@@ -15,8 +15,6 @@ export class SignupComponent {
 
   @ViewChild('username') usernameField:NgModel |undefined ;
 
-  data:any;
-
   private url = "http://localhost:8080/user";
 
   constructor(private http: HttpClient, private router:Router){ }
@@ -33,21 +31,20 @@ export class SignupComponent {
     const data = JSON.stringify(this.userdata)
      
     this.http.post(this.url, data, this.headers).subscribe(data=>{
-      console.log(data)
-      this.signedUp=data
-
-
       
-    })
+      this.signedUp=data
+      
 
-    if (this.signedUp)
-    {
-        this.router.navigate(['/home'])
-    }
-    else{
-      this.usernameExists=true
-      this.usernameField?.control.markAsPristine()
-    }
+      if (this.signedUp)
+      {
+          this.router.navigate(['/home'])
+      }
+      else{
+        this.usernameExists=true
+        this.usernameField?.control.markAsPristine()
+      }
+
+    })
   }
 
 }
@@ -57,6 +54,8 @@ class User{
     
   }
 }
+
+
 
 
 
