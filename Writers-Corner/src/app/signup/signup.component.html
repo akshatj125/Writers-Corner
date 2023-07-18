@@ -13,13 +13,15 @@
       <div *ngIf="name.invalid && name.touched" class="invalidMessage">
           Name is required
       </div>
-      <input type="text" placeholder="Username" required [(ngModel)]="userdata.username"  #username="ngModel" [class.is-invalid] = "username.invalid && username.touched" name="username"> 
+      <input type="text" placeholder="Username" required [(ngModel)]="userdata.username"  #username="ngModel"   [class.is-invalid] = "username.invalid && username.touched" name="username"> 
       <br/>
+      
       <div *ngIf="username.invalid && username.touched" class="invalidMessage">
         Username is required
       </div>
 
-      <div *ngIf="usernameExists" class="invalidMessage">
+
+      <div *ngIf="usernameExists && username.pristine" class="invalidMessage">
         Username is already taken
       </div>
 
