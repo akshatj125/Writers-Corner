@@ -1,5 +1,5 @@
 import { JsonPipe } from '@angular/common';
-import { Component, ElementRef, ViewChild } from '@angular/core';
+import { Component, ElementRef, EventEmitter, Output, ViewChild } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { NgModel } from '@angular/forms';
 import { Router } from '@angular/router';
@@ -9,8 +9,11 @@ import { Router } from '@angular/router';
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
-  userdata =new User("","","","")
+  @Output() public signupEvent= new EventEmitter()
 
+
+
+  userdata =new User("","","","")
   usernameExists= false
 
   @ViewChild('username') usernameField:NgModel |undefined ;
@@ -37,6 +40,7 @@ export class SignupComponent {
 
       if (this.signedUp)
       {
+          this.signupEvent.emit(this.userdata.username)
           this.router.navigate(['/home'])
       }
       else{

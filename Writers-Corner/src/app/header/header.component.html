@@ -10,7 +10,9 @@
     </div>
 
     <div *ngIf="LoggedIn">
-        {{username}}
+        {{username.slice(0,1).toUpperCase()}}
+        
+        
     </div>
 </header>
 
