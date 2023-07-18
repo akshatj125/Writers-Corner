@@ -19,7 +19,7 @@ export class SignupComponent {
 
   constructor(private http: HttpClient, private router:Router){ }
  
-
+  
   headers={
     headers:new HttpHeaders({
       'Content-Type':'application/json'
