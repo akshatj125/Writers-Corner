@@ -35,7 +35,11 @@ export class SignupComponent {
     this.http.post(this.url, data, this.headers).subscribe(data=>{
       console.log(data)
       this.signedUp=data
+
+
+      
     })
+
     if (this.signedUp)
     {
         this.router.navigate(['/home'])
