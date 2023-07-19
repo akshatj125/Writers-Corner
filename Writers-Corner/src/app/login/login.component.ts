@@ -1,8 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-import { HttpClient } from '@angular/common/http';
-import { HttpHeaders } from '@angular/common/http';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
