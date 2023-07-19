@@ -37,7 +37,8 @@ export class SignupComponent {
     
       if (data)
       {
-          this.signupEvent.emit(this.userdata.username)
+          localStorage.setItem("username",this.userdata.username)
+          localStorage.setItem("password",this.userdata.password)
           this.router.navigate(['/home'])
       }
       else{

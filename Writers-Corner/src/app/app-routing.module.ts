@@ -8,7 +8,7 @@ import { BlogpageComponent } from './blogpage/blogpage.component';
 const routes: Routes = [
 
   {path:"", redirectTo:"/home",pathMatch:"full"},
-  {path:"home", component:HomeComponent},
+  {path:"home", component:HomeComponent,},
   {path:"login", component:LoginComponent},
   {path:"signup", component:SignupComponent},
   {path:"blogs/:id",component:BlogpageComponent}
@@ -17,7 +17,7 @@ const routes: Routes = [
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes, {enableTracing: true})
+    RouterModule.forRoot(routes, {enableTracing: true , onSameUrlNavigation: 'reload'})
   ],
   exports: [RouterModule]
 })
