@@ -34,8 +34,14 @@ export class LoginComponent {
         {
           localStorage.setItem("username",this.userdata.username)
           localStorage.setItem("password",this.userdata.password)
-
-          this.router.navigate(['/home'])
+          
+          var url=localStorage.getItem("redirectUrl")
+          if(url==null)
+          {
+            url="/home"
+          }
+          localStorage.removeItem("redirectUrl")
+          this.router.navigate([url])
         }
         else{
           alert("Invalid credentials")

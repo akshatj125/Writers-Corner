@@ -4,9 +4,9 @@
     </div>
     
     <div *ngIf="EnableLogin">
-         <a href="/login" class="login-link">
-            <button class="button-64" role="button"><span class="text">LOGIN</span></button>
-        </a> 
+         <!-- <a href="/login" class="login-link"> -->
+            <button (click)="Login()" class="button-64" role="button"><span class="text">LOGIN</span></button>
+        <!-- </a>  -->
     </div>
 
     <div *ngIf="LoggedIn">

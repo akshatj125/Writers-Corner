@@ -15,13 +15,29 @@ export class HeaderComponent implements OnInit{
   public LoggedIn = false;
 
   ngOnInit(): void {
-      if(this.username!==""){
-        this.LoggedIn = true;
-      }
+    const u=localStorage.getItem("username");
+    
+    if(u!=null)
+    {
+      this.username=u
+      console.log(this.username)
+    }
+    if (this.username!=="")
+    {
+      this.EnableLogin=false
+      this.LoggedIn = true;
+    }
+
+
   }
   LogOut(){
     localStorage.clear()
     this.router.navigate(['/home'])
+  }
+  Login()
+  {
+    localStorage.setItem("redirectUrl",this.router.url)
+    this.router.navigate(["/login"])
   }
 
 }
