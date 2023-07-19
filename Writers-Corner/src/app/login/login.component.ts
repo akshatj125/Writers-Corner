@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { HeaderComponent } from '../header/header.component';
-
+import { LocalStorage } from 'ngx-webstorage';
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -11,6 +11,7 @@ export class LoginComponent {
 
     login(){
       console.log(this.userdata)
+      localStorage.setItem("username",this.userdata.username,"password")
     }
 }
 
