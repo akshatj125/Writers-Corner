@@ -63,6 +63,22 @@ public class UserController {
         return true;
     }
 
+    @CrossOrigin()
+    @PostMapping("/login")
+    public boolean login(@RequestBody User user) {
+        Optional<User> retrievedUser = this.userRepository.findByUsername(user.getUsername());
+        if(retrievedUser.isPresent()) {
+            System.out.println("user is present " + retrievedUser.get());
+            System.out.println(user.getPassword()+" "+retrievedUser.get().getPassword());
+            if(user.getPassword().equals( retrievedUser.get().getPassword()))
+            {
+                return true;
+            }
+            return false;
+        }
+        return false;
+    }
+
 
     @DeleteMapping("/user/{id}")
     public void deleteUserById(@PathVariable("id") Long id){
