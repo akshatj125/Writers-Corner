@@ -28,17 +28,14 @@ export class SignupComponent {
       'Content-Type':'application/json'
     })
   }
-  signedUp :any= false;
+
   signup(){
     // console.log(this.userdata)
     const data = JSON.stringify(this.userdata)
      
     this.http.post(this.url, data, this.headers).subscribe(data=>{
-      
-      this.signedUp=data
-      
-
-      if (this.signedUp)
+    
+      if (data)
       {
           this.signupEvent.emit(this.userdata.username)
           this.router.navigate(['/home'])
