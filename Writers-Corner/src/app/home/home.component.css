@@ -1,6 +1,6 @@
 .blogs{
     overflow: scroll;
-    max-height: 89vh;
+    max-height: 91vh;
     display: inline-flex;
     min-width: 100vw;
 }
