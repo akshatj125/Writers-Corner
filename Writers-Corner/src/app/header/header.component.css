@@ -97,6 +97,7 @@ header {
 .dropdown {
   position: relative;
   display: inline-block;
+  height: inherit;
 
 }
 
@@ -104,7 +105,7 @@ header {
   display: none;
   position: absolute;
   right: 0;
-  top: 9vh;
+  top: 10vh;
   /* margin-top: 13px; */
   background-color: #f1f1f1;
   min-width: 160px;
