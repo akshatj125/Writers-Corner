@@ -39,5 +39,8 @@ export class HeaderComponent implements OnInit{
     localStorage.setItem("redirectUrl",this.router.url)
     this.router.navigate(["/login"])
   }
+  toggleDrop(){
+    document.getElementById("dropdown")?.classList.toggle("show")
+  }
 
 }
