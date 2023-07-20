@@ -9,13 +9,29 @@
         <!-- </a>  -->
     </div>
 
-    <div *ngIf="LoggedIn">
-        <a href="/home">
-        <button (click)="LogOut()">
+    <!-- <div class = "LogOutDiv" *ngIf="LoggedIn">
+        <button class = "LogOut"  (click)="LogOut()">
             {{username.slice(0,1).toUpperCase()}}
         </button>
-    </a>
+        <br/>
+        <div class="dropdown-content">
+            <a href="#">MyProfile</a>
+            <a href="#">MyBlogs</a>
+            <a href="#">Bookmarks</a>
+            <a href="#">Logout</a>
+          </div>
+    </div> -->
+
+
+    <div class="dropdown">
+        <button class="dropbtn">Dropdown</button>
+        <div class="dropdown-content">
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
     </div>
+
 </header>
 
   <!-- Rest of your website content here -->
