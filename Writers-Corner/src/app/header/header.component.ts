@@ -1,12 +1,15 @@
-import { Component , Input, OnInit} from '@angular/core';
+import { Component , ElementRef, Input, OnInit} from '@angular/core';
 import { Router } from '@angular/router';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
+  host: {
+    '(document:click)': 'clickOut($event)',
+  },
 })
 export class HeaderComponent implements OnInit{
-  constructor(private router:Router){}
+  constructor(private router:Router, private eref:ElementRef){}
   @Input() 
   public EnableLogin =false;
 
@@ -43,4 +46,17 @@ export class HeaderComponent implements OnInit{
     document.getElementById("dropdown")?.classList.toggle("show")
   }
 
+  clickOut(event: any)
+  {
+    if (!event.target.matches('.dropdown') && !event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
 }
