@@ -1,6 +1,6 @@
 header {
     background-color: rgba(255, 255 ,255,0.7);
-    
+    padding: 10px;
     display: flex;
     height: 9vh;
     align-items: center;
@@ -75,30 +75,30 @@ header {
   }
 }
 
-/* .LogOut{
-  border-radius: 100%;
-  height: 100%;
-  width: 100%;
-  border: 1px solid #ddd ;
-  font-size: large;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-  background-color: #6c757d;
-  cursor: pointer;
-} */
-
 .dropbtn {
-  background-color: #04AA6D;
+  width: 40px;
+  height: 40px;
+  background-color: #B97674;
   color: white;
-  padding: 16px;
-  font-size: 16px;
   border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin: 0 10px;
+  border-radius: 100%;
+  font-size: 16px;
+  align-self: center;
+  aspect-ratio: 1/1;
+  display: flex;
+  justify-content: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown {
   position: relative;
-  display: inline-block;
+  display: flex;
   height: inherit;
-
+  text-align: center;
+  font-family: 'Ubuntu';
 }
 
 .dropdown-content {
@@ -106,11 +106,10 @@ header {
   position: absolute;
   right: 0;
   top: 10vh;
-  /* margin-top: 13px; */
-  background-color: #f1f1f1;
   min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
   z-index: 1;
+  margin-right: 8px;
+  box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.3);
 }
 
 .dropdown-content a {
@@ -122,6 +121,27 @@ header {
 
 .show{
   display: block;
+}
+
+.ddBtns{
+  width: 100%;
+  height: 8vh;
+  /* box-shadow: 5px 0 5px 0px rgba(0, 0, 0, 0.3), -5px 0 5px 0px rgba(0, 0, 0, 0.3); */
+  border-radius: 0;
+  border: 0;
+  font-size: medium;
+  display: flex;
+  align-self: center;
+  background-color: rgba(255, 255 ,255,0.9);
+}
+
+.ddBtns:hover{
+  
+  background-color:  rgba(92, 233, 198, 0.9);
+}
+button img{
+  height: 30px;
+
 }
 
 
