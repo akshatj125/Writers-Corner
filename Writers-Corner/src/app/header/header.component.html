@@ -9,39 +9,28 @@
         <!-- </a>  -->
     </div>
 
-    <!-- <div class = "LogOutDiv" *ngIf="LoggedIn">
-        <button class = "LogOut"  (click)="LogOut()">
-            {{username.slice(0,1).toUpperCase()}}
-        </button>
-        <br/>
-        <div class="dropdown-content">
-            <a href="#">MyProfile</a>
-            <a href="#">MyBlogs</a>
-            <a href="#">Bookmarks</a>
-            <a href="#">Logout</a>
-          </div>
-    </div> -->
-
-
     <div class="dropdown" *ngIf="LoggedIn" >
         <button (click)="toggleDrop()" class="dropbtn">{{username.slice(0,1).toUpperCase()}}</button>
         <div id="dropdown" class="dropdown-content">
             <button class="ddBtns">
-                My Profile
+                <a href="/home">
+                    <div class="icon" style='mask:url("../../assets/images/MyProfile.png") center/contain;'></div>
+                    &nbsp; &nbsp;My Profile</a>
             </button>
           
             <button class="ddBtns">
-                
-                Bookmarks
+                <a href="/home">
+                    <div class="icon" style='mask:url("../../assets/images/bookmarks.png") center/contain;'></div> &nbsp; &nbsp;Bookmarks</a>
             </button>
 
             <button class="ddBtns">
-                Settings
+                <a href="/home">
+                    <div class="icon" style='mask:url("../../assets/images/settings.png") center/contain;'></div> &nbsp; &nbsp;Settings</a>
             </button>
 
             <button class="ddBtns" (click)="LogOut()">
-                
-                <a href="/home"><img src="assets/images/logout.png" alt="Logo">Logout</a>
+                <a href="/home">
+                    <div class="icon" style='mask:url("../../assets/images/logout.png") center/contain;'></div> &nbsp; &nbsp;Logout</a>
             </button>
         </div>
     </div>
