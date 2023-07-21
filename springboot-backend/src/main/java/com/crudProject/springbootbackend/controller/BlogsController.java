@@ -25,11 +25,22 @@ public class BlogsController {
         return this.BlogsRepository.findAll();
     }
 
+    @RequestMapping("/blogs/{blogId}")
+    public Optional<Blogs> findById(@PathVariable long blogId)
+    {
+        return this.BlogsRepository.findByblogId(blogId);
+    }
     @CrossOrigin()
     @PostMapping("/createblog")
     public void CreateBlog(@RequestBody Blogs blog)
     {
+        System.out.println(blog);
         this.BlogsRepository.save(blog);
+    }
+
+    @DeleteMapping("/delete/{blogId}")
+    public void deleteBlogById(@PathVariable("blogId") Long blogId){
+        BlogsRepository.deleteById(blogId);
     }
 
 }
