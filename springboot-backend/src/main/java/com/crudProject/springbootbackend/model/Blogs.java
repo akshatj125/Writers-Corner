@@ -1,7 +1,5 @@
 package com.crudProject.springbootbackend.model;
-
-import java.time.LocalDate;
-import java.time.LocalDateTime;
+import java.sql.Date;
 import jakarta.persistence.*;
 import lombok.*;
 import org.springframework.stereotype.Component;
@@ -24,7 +22,9 @@ public class Blogs {
     private String content;
 
     @JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "dd-MM-yyyy")
-    private LocalDate datetime;
+    @Temporal(TemporalType.DATE)
+    private Date datetime;
+
     private long userId;
     @Builder.Default
     private long views = 0;
@@ -37,8 +37,8 @@ public class Blogs {
     //     this.blogId = blogId;
     //     this.title = title;
     //     this.content = content;
-    //     this.datetime = LocalDate.now();
-    //     System.out.println(" s " + LocalDateTime.now());
+    //     this.datetime = Date.now();
+    //     System.out.println(" s " + DateTime.now());
     //     this.userId = userId;
     //     this.views = views;
     // }
@@ -46,18 +46,18 @@ public class Blogs {
     // public Blogs(String title, String content, long userId, long views) {
     //     this.title = title;
     //     this.content = content;
-    //     this.datetime = LocalDate.now();
-    //     System.out.println(" s " + LocalDateTime.now());
+    //     this.datetime = Date.now();
+    //     System.out.println(" s " + DateTime.now());
     //     this.userId = userId;
     //     this.views = views;
     // }
 
 
-    // public Blogs(long blogId, String title, String content, LocalDate datetime, long userId, long views) {
+    // public Blogs(long blogId, String title, String content, Date datetime, long userId, long views) {
     //     this.blogId = blogId;
     //     this.title = title;
     //     this.content = content;
-    //     this.datetime = LocalDate.now();
+    //     this.datetime = Date.now();
     //     this.userId = userId;
     //     this.views = views;
     // }
