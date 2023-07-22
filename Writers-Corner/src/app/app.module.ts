@@ -25,7 +25,7 @@ import { BlogUploadComponent } from './blog-upload/blog-upload.component';
     routingComponents,
     BlogpageComponent,
     FooterComponent,
-    BlogUploadComponent
+    BlogUploadComponent,
   ],
   imports: [
     BrowserModule,
