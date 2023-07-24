@@ -10,7 +10,7 @@ import org.springframework.stereotype.Component;
 @Component
 @Getter
 @Setter
-
+@Data
 public class User {
     
 //    @SequenceGenerator(
