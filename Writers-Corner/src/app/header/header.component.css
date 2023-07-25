@@ -4,7 +4,7 @@ header {
     display: flex;
     height: 9vh;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   }
   
@@ -14,12 +14,15 @@ header {
   }
   
   .logo img {
-    width: 20vw;
+    height: 5vh;
   }
 
   a {
     text-decoration: none;
-    /* font-family: 'Slackey'; */
+    font-family: 'Ubuntu';
+    color: #fff;
+    font-size: 14px;
+    font-weight: bold;
   }
 
   
@@ -80,6 +83,7 @@ header {
   height: 40px;
   background-color: #B97674;
   color: white;
+  font-weight: bold;
   border: none;
   padding: 10px 20px;
   cursor: pointer;
@@ -146,13 +150,30 @@ header {
 .ddBtns:hover{
   background-color:  rgba(92, 233, 198, 0.9);
 }
+
 button img{
   height: 30px;
 }
-
 
 .icon{
   width: 30px;
   height: 30px;
   background: #555;
+}
+
+.rightContent{float: right;
+right: 0;
+position: absolute;
+display: flex;
+align-items: center;
+padding: 0 10px;
+}
+
+.addBlogClick{
+  padding: 11px;
+  margin-right: 4vw;
+  border-radius: 8px;
+  border: none;
+  background-color: #B97674;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
 }

@@ -9,9 +9,13 @@ import { Router } from '@angular/router';
   },
 })
 export class HeaderComponent implements OnInit{
+
   constructor(private router:Router, private eref:ElementRef){}
   @Input() 
   public EnableLogin =false;
+
+  @Input()
+  public showAddBlog = false;
 
   @Input() 
   public username ="";
@@ -31,8 +35,11 @@ export class HeaderComponent implements OnInit{
       this.LoggedIn = true;
     }
 
-
+    if(!this.LoggedIn){
+      this.showAddBlog = false;
+    }
   }
+  
   LogOut(){
     localStorage.clear()
     this.router.navigate(['/home'])
@@ -59,4 +66,5 @@ export class HeaderComponent implements OnInit{
       }
     }
   }
+  
 }
