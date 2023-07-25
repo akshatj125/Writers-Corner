@@ -5,7 +5,6 @@ import com.ashish.jwt.jwtbackend.dtos.SignUpDto;
 import com.ashish.jwt.jwtbackend.dtos.UserDto;
 import com.ashish.jwt.jwtbackend.entities.User;
 import com.ashish.jwt.jwtbackend.exceptions.AppException;
-import com.ashish.jwt.jwtbackend.mappers.UserMapper;
 import com.ashish.jwt.jwtbackend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.ApplicationContextException;
@@ -25,37 +24,36 @@ public class UserService {
 
     private final PasswordEncoder passwordEncoder;
 
-    private final UserMapper userMapper;
 
-    public UserDto login(CredentialsDto credentialsDto) {
-        User user = userRepository.findByLogin(credentialsDto.getLogin())
+    public User login(User credentials) {
+        User user = userRepository.findByUsername(credentials.getUsername())
                 .orElseThrow(() -> new AppException("Unknown user", HttpStatus.NOT_FOUND));
 
-        if (passwordEncoder.matches(CharBuffer.wrap(credentialsDto.getPassword()), user.getPassword())) {
-            return userMapper.toUserDto(user);
+        if (passwordEncoder.matches(CharBuffer.wrap(credentials.getPassword()), user.getPassword())) {
+            return user;
         }
         throw new AppException("Invalid password", HttpStatus.BAD_REQUEST);
     }
 
 
-    public UserDto findByLogin(String login) {
-        User user = userRepository.findByLogin(login)
+    public User findByUsername(String username) {
+        User user = userRepository.findByUsername(username)
                 .orElseThrow(() -> new AppException("Unknown user", HttpStatus.NOT_FOUND));
-        return userMapper.toUserDto(user);
+        return user;
     }
 
-    public UserDto register(SignUpDto userDto) {
-        Optional<User> optionalUser = userRepository.findByLogin(userDto.getLogin());
+    public User register(User user) {
+        Optional<User> optionalUser = userRepository.findByUsername(user.getUsername());
 
         if (optionalUser.isPresent()) {
             throw new AppException("Login already exists", HttpStatus.BAD_REQUEST);
         }
 
-        User user = userMapper.signUpToUser(userDto);
-        user.setPassword(passwordEncoder.encode(CharBuffer.wrap(userDto.getPassword())));
+        
+        user.setPassword(passwordEncoder.encode(CharBuffer.wrap(user.getPassword())));
 
         User savedUser = userRepository.save(user);
 
-        return userMapper.toUserDto(savedUser);
+        return savedUser;
     }
 }

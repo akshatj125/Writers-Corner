@@ -1,6 +1,7 @@
 package com.ashish.jwt.jwtbackend.config;
 
 import com.ashish.jwt.jwtbackend.dtos.UserDto;
+import com.ashish.jwt.jwtbackend.entities.User;
 import com.ashish.jwt.jwtbackend.services.UserService;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
@@ -54,7 +55,7 @@ public class UserAuthProvider {
 
         DecodedJWT decoded = verifier.verify(token);
 
-        UserDto user = userService.findByLogin(decoded.getIssuer());
+        User user = userService.findByUsername(decoded.getIssuer());
 
         return new UsernamePasswordAuthenticationToken(user, null, Collections.emptyList());
     }
