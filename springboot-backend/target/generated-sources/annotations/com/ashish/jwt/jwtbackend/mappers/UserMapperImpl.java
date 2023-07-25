@@ -8,8 +8,8 @@ import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2023-07-25T12:49:54+0530",
-    comments = "version: 1.5.3.Final, compiler: Eclipse JDT (IDE) 3.35.0.v20230622-1425, environment: Java 17.0.7 (Eclipse Adoptium)"
+    date = "2023-07-25T14:34:11+0530",
+    comments = "version: 1.5.3.Final, compiler: javac, environment: Java 17.0.7 (Private Build)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
@@ -22,8 +22,8 @@ public class UserMapperImpl implements UserMapper {
 
         UserDto.UserDtoBuilder userDto = UserDto.builder();
 
-        userDto.firstName( user.getFirstName() );
         userDto.id( user.getId() );
+        userDto.firstName( user.getFirstName() );
         userDto.lastName( user.getLastName() );
         userDto.login( user.getLogin() );
 
