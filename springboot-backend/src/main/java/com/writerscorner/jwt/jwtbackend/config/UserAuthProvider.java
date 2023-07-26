@@ -1,7 +1,7 @@
-package com.ashish.jwt.jwtbackend.config;
+package com.writerscorner.jwt.jwtbackend.config;
 
-import com.ashish.jwt.jwtbackend.entities.User;
-import com.ashish.jwt.jwtbackend.services.UserService;
+import com.writerscorner.jwt.jwtbackend.entities.User;
+import com.writerscorner.jwt.jwtbackend.services.UserService;
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;
 import com.auth0.jwt.algorithms.Algorithm;

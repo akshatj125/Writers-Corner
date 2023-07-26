@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.entities;
+package com.writerscorner.jwt.jwtbackend.entities;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Size;

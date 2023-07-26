@@ -1,6 +1,6 @@
-package com.ashish.jwt.jwtbackend.repositories;
+package com.writerscorner.jwt.jwtbackend.repositories;
 
-import com.ashish.jwt.jwtbackend.entities.User;
+import com.writerscorner.jwt.jwtbackend.entities.User;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.util.Optional;

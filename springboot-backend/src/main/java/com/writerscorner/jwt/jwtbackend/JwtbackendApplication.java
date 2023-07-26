@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend;
+package com.writerscorner.jwt.jwtbackend;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

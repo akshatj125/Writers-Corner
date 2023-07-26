@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.config;
+package com.writerscorner.jwt.jwtbackend.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;

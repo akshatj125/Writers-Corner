@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.dtos;
+package com.writerscorner.jwt.jwtbackend.dtos;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

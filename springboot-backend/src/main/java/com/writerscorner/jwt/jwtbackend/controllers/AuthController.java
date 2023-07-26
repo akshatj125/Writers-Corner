@@ -1,12 +1,8 @@
-package com.ashish.jwt.jwtbackend.controllers;
+package com.writerscorner.jwt.jwtbackend.controllers;
 
-import com.ashish.jwt.jwtbackend.config.UserAuthProvider;
-import com.ashish.jwt.jwtbackend.dtos.CredentialsDto;
-import com.ashish.jwt.jwtbackend.dtos.SignUpDto;
-import com.ashish.jwt.jwtbackend.dtos.UserDto;
-import com.ashish.jwt.jwtbackend.entities.User;
-import com.ashish.jwt.jwtbackend.services.UserService;
-import jakarta.validation.Valid;
+import com.writerscorner.jwt.jwtbackend.config.UserAuthProvider;
+import com.writerscorner.jwt.jwtbackend.entities.User;
+import com.writerscorner.jwt.jwtbackend.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.PostMapping;

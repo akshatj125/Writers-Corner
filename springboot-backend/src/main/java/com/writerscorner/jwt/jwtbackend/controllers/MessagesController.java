@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.controllers;
+package com.writerscorner.jwt.jwtbackend.controllers;
 
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;

@@ -1,13 +1,9 @@
-package com.ashish.jwt.jwtbackend.services;
+package com.writerscorner.jwt.jwtbackend.services;
 
-import com.ashish.jwt.jwtbackend.dtos.CredentialsDto;
-import com.ashish.jwt.jwtbackend.dtos.SignUpDto;
-import com.ashish.jwt.jwtbackend.dtos.UserDto;
-import com.ashish.jwt.jwtbackend.entities.User;
-import com.ashish.jwt.jwtbackend.exceptions.AppException;
-import com.ashish.jwt.jwtbackend.repositories.UserRepository;
+import com.writerscorner.jwt.jwtbackend.entities.User;
+import com.writerscorner.jwt.jwtbackend.exceptions.AppException;
+import com.writerscorner.jwt.jwtbackend.repositories.UserRepository;
 import lombok.RequiredArgsConstructor;
-import org.springframework.context.ApplicationContextException;
 import org.springframework.http.HttpStatus;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;

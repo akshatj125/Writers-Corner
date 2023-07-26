@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.config;
+package com.writerscorner.jwt.jwtbackend.config;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.context.annotation.Bean;

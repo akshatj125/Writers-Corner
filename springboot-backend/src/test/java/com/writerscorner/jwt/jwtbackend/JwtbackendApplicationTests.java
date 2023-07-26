@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend;
+package com.writerscorner.jwt.jwtbackend;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

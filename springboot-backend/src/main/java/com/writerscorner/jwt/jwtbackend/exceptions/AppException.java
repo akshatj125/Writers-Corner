@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.exceptions;
+package com.writerscorner.jwt.jwtbackend.exceptions;
 
 import org.springframework.http.HttpStatus;
 

@@ -1,6 +1,6 @@
-package com.ashish.jwt.jwtbackend.config;
+package com.writerscorner.jwt.jwtbackend.config;
 
-import com.ashish.jwt.jwtbackend.dtos.ErrorDto;
+import com.writerscorner.jwt.jwtbackend.dtos.ErrorDto;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,7 +10,6 @@ import org.springframework.http.MediaType;
 import org.springframework.security.web.AuthenticationEntryPoint;
 import org.springframework.stereotype.Component;
 
-import javax.naming.AuthenticationException;
 import java.io.IOException;
 
 

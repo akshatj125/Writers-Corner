@@ -1,4 +1,4 @@
-package com.ashish.jwt.jwtbackend.config;
+package com.writerscorner.jwt.jwtbackend.config;
 
 
 import jakarta.servlet.FilterChain;
