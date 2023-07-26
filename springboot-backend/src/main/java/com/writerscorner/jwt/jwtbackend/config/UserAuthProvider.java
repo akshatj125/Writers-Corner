@@ -1,6 +1,5 @@
 package com.ashish.jwt.jwtbackend.config;
 
-import com.ashish.jwt.jwtbackend.dtos.UserDto;
 import com.ashish.jwt.jwtbackend.entities.User;
 import com.ashish.jwt.jwtbackend.services.UserService;
 import com.auth0.jwt.JWT;
