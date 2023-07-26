@@ -1,47 +1,47 @@
-  .blog-section{
-    
-    text-align: center;
-    min-width: 100vw;
-    min-height: 91vh;
-  }
-  .blog-container{
-    display: grid;
-    padding: 2.5vh 1.5vw;
-    grid-template-columns: auto auto auto;
-    gap: 5vh;
-   
-    /* justify-content: space-between; */
-  }
-  
-  .blog-card {
-    /* width: 8%; */
-    /* margin: 1% 4%; */
-    transition: transform .2s;
-    border: 1px solid #ddd;
-    border-radius: 40px;
-    background-color: rgba(255,255,255,0.7);
-    height: 350px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
-    text-align: center;
-  }
-  .blog-card:hover{
-    transform: scale(1.05);
-  }
-  .blog-title {
-    font-size: 24px;
-    font-weight: bold;
-    margin-bottom: 10px;
-    font-family: Ubuntu;
-    color: #333;
-  }
-  
-  .blog-description {
-    font-size: 14px;
-    color: #555;
-    font-family: Ubuntu;
-  }
+.blog-section {
+  text-align: center;
+  min-width: 100vw;
+  min-height: 91vh;
+}
+.blog-container {
+  display: grid;
+  padding: 2.5vh 1.5vw;
+  grid-template-columns: 30vw 30vw 30vw;
+  gap: 3vw;
+  justify-content: center;
+  /* justify-content: space-between; */
+}
 
-  /* button{
+.blog-card {
+  /* width: 8%; */
+  /* margin: 1% 4%; */
+  transition: transform 0.2s;
+  border: 1px solid #ddd;
+  border-radius: 40px;
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 350px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  text-align: center;
+}
+.blog-card:hover {
+  transform: scale(1.05);
+}
+.blog-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  font-family: Ubuntu;
+  color: #333;
+}
+
+.blog-description {
+  font-size: 14px;
+  color: #555;
+  word-wrap: break-word;
+  font-family: Ubuntu;
+}
+
+/* button{
     padding: 2%;
     margin: auto;
     background-color: burlywood;
@@ -49,26 +49,23 @@
     margin-top: 4%;
   } */
 
-  a{
-    font-family: Ubuntu;
-    text-decoration: none;
+a {
+  font-family: Ubuntu;
+  text-decoration: none;
 }
 
-
-  .arrow-buttons {
-    /* Transparent background */
-    background-color:transparent;
-    border: none;
-    /* Size */
-    height: 25px;
-    width: 25px;
+.arrow-buttons {
+  /* Transparent background */
+  background-color: transparent;
+  border: none;
+  /* Size */
+  height: 25px;
+  width: 25px;
 }
 .arrow-button--b {
   /* Edges */
   border-bottom: 4px solid rgba(50, 50, 50, 0.5);
-  border-right: 4px solid  rgba(50, 50, 50, 0.5);
+  border-right: 4px solid rgba(50, 50, 50, 0.5);
   transform: translateY(-25%) rotate(45deg) translateX(-25%);
   cursor: pointer;
-
 }
-
