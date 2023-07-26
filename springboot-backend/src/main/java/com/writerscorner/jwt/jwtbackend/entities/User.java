@@ -40,6 +40,14 @@ public class User {
         this.password = password;
     }
 
+    public User(String username, String name, String emailId) {
+        this.username = username;
+        this.name = name;
+        this.emailId = emailId;
+    }
+
+    
+
     public User(String username, String password) {
         this.username = username;
         this.password = password;

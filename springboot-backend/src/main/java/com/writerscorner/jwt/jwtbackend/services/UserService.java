@@ -38,6 +38,12 @@ public class UserService {
         return user;
     }
 
+    public User restrictedFind(String username){
+        User user = userRepository.findByUsername(username)
+                .orElseThrow(() -> new AppException("Unknown user", HttpStatus.NOT_FOUND));
+        return new User(user.getUsername(),user.getName(), user.getEmailId());
+    }
+
     public User register(User user) {
         Optional<User> optionalUser = userRepository.findByUsername(user.getUsername());
 
