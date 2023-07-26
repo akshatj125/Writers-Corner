@@ -5,6 +5,7 @@ import { LoginComponent } from './login/login.component';
 import { SignupComponent } from './signup/signup.component';
 import { BlogpageComponent } from './blogpage/blogpage.component';
 import { BlogUploadComponent } from './blog-upload/blog-upload.component';
+import { BlogsComponent } from './blogs/blogs.component';
 
 const routes: Routes = [
 
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path:"home", component:HomeComponent,},
   {path:"login", component:LoginComponent},
   {path:"signup", component:SignupComponent},
-  {path:"blogs/:id",component:BlogpageComponent},
+  {path:"blog/:id",component:BlogpageComponent},
   {path:"blog-upload",component:BlogUploadComponent}
 
 ]

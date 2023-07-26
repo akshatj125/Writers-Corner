@@ -1,0 +1,40 @@
+.fullblog {
+    width: 100vw;
+    overflow: scroll;
+    height: 91vh;
+}
+
+.insideblog{
+    width: 85%;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: rgba(100, 100, 100, 0.15);
+}
+
+h2 {
+    color: #333;
+}
+
+.author {
+    font-size: 14px;
+    color: #666;
+}
+
+.date {
+    font-size: 14px;
+    color: #999;
+}
+
+.content {
+    margin-top: 10px;
+    overflow-y: scroll;
+}
+
+.userId{
+    color: #666;
+}
+
+.blogId{
+    color: #666;
+}

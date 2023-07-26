@@ -22,10 +22,17 @@
   height: 350px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
   text-align: center;
+  justify-content: center;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: start;
+  overflow: hidden;
 }
+
 .blog-card:hover {
   transform: scale(1.05);
 }
+
 .blog-title {
   font-size: 24px;
   font-weight: bold;
@@ -35,19 +42,11 @@
 }
 
 .blog-description {
-  font-size: 14px;
+  font-size: 16px;
   color: #555;
   word-wrap: break-word;
-  font-family: Ubuntu;
+  font-family: 'Ubuntu';
 }
-
-/* button{
-    padding: 2%;
-    margin: auto;
-    background-color: burlywood;
-    margin-bottom: 4%;
-    margin-top: 4%;
-  } */
 
 a {
   font-family: Ubuntu;
@@ -55,17 +54,19 @@ a {
 }
 
 .arrow-buttons {
-  /* Transparent background */
   background-color: transparent;
   border: none;
-  /* Size */
   height: 25px;
   width: 25px;
 }
 .arrow-button--b {
-  /* Edges */
   border-bottom: 4px solid rgba(50, 50, 50, 0.5);
   border-right: 4px solid rgba(50, 50, 50, 0.5);
   transform: translateY(-25%) rotate(45deg) translateX(-25%);
   cursor: pointer;
+}
+
+p{
+  width: 85%;
+  text-align: justify;
 }

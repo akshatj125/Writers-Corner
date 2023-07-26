@@ -1,24 +1,19 @@
 <div class="blog-section">
   <div class="blog-container">
     <div *ngFor="let blog of blogs"  >
-      <a href="/blogs/{{blog.id}}" class="read-more">
+      <a href="/blog/{{blog.blogId}}" class="read-more">
         <div class="blog-card"> 
           <h2 class="blog-title">{{blog.title}}</h2>
-          <p class="blog-description">{{blog.content.slice(0,200)}}</p>
+          <p class="blog-description">{{blog.content.slice(0,500)+"...."}}</p>
         </div>
-
       </a>
-    
-      
     </div>
   </div>
-  
-  
+
   <button *ngIf="isMoreAvailable" class="arrow-buttons" (click)="IncX()">
     <div class="arrow-buttons arrow-button--b"></div>
-  
   </button>
   
-  <app-footer class="footer"></app-footer>
+<app-footer class="footer"></app-footer>
 
 </div>
