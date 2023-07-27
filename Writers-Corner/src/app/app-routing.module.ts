@@ -6,6 +6,7 @@ import { SignupComponent } from './signup/signup.component';
 import { BlogpageComponent } from './blogpage/blogpage.component';
 import { BlogUploadComponent } from './blog-upload/blog-upload.component';
 import { BlogsComponent } from './blogs/blogs.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
 
 const routes: Routes = [
 
@@ -14,7 +15,8 @@ const routes: Routes = [
   {path:"login", component:LoginComponent},
   {path:"signup", component:SignupComponent},
   {path:"blog/:id",component:BlogpageComponent},
-  {path:"blog-upload",component:BlogUploadComponent}
+  {path:"blog-upload",component:BlogUploadComponent},
+  {path:"myprofile", component:MyprofileComponent}
 
 ]
 
@@ -30,5 +32,6 @@ export const routingComponents=[
   LoginComponent,
   SignupComponent,
   BlogpageComponent,
-  BlogUploadComponent
+  BlogUploadComponent,
+  MyprofileComponent
 ]
