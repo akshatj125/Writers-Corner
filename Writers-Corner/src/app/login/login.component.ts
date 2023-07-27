@@ -22,9 +22,8 @@ export class LoginComponent {
     })
   }
 
-    login(){
-      // console.log(this.userdata)
-      
+  login(){
+ 
       const data = JSON.stringify(this.userdata)
      
       this.http.post(this.url, data, this.headers).subscribe(data=>{

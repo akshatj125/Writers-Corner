@@ -13,9 +13,6 @@ export class BlogsComponent implements OnInit{
   public blogs1:any
   private url = "http://localhost:8080/blogs";
 
-  
- 
-  
   headers={
     headers:new HttpHeaders({
       'Content-Type':'application/json'

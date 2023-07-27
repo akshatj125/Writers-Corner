@@ -26,6 +26,7 @@ public class BlogsController {
     }
 
     @RequestMapping("/blogs/{blogId}")
+    @CrossOrigin()
     public Optional<Blogs> findById(@PathVariable long blogId)
     {
         return this.BlogsRepository.findByblogId(blogId);
