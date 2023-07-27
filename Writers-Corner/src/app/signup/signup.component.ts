@@ -18,7 +18,7 @@ export class SignupComponent {
 
   @ViewChild('username') usernameField:NgModel |undefined ;
 
-  private url = "http://localhost:8080/user";
+  private url = "http://localhost:8080/register";
 
   constructor(private http: HttpClient, private router:Router){ }
  
@@ -33,26 +33,24 @@ export class SignupComponent {
     // console.log(this.userdata)
     const data = JSON.stringify(this.userdata)
      
-    this.http.post(this.url, data, this.headers).subscribe(data=>{
-    
-      if (data)
+    this.http.post<User>(this.url, data, this.headers).subscribe(data=>{
+      localStorage.setItem("username",data.username)
+      localStorage.setItem("token","Bearer "+data.password)
+      var url=localStorage.getItem("redirectUrl")
+      if(url==null)
       {
-          localStorage.setItem("username",this.userdata.username)
-          localStorage.setItem("password",this.userdata.password)
-          var url=localStorage.getItem("redirectUrl")
-          if(url==null)
-          {
-            url="/home"
-          }
-          localStorage.removeItem("redirectUrl")
-          this.router.navigate([url])
+        url="/home"
       }
-      else{
-        this.usernameExists=true
-        this.usernameField?.control.markAsPristine()
-      }
+      localStorage.removeItem("redirectUrl")
+      this.router.navigate([url])
 
-    })
+    },
+    error=>{
+      alert(error.error.message)
+      this.usernameExists=true
+      this.usernameField?.control.markAsPristine()
+    }
+    )
   }
 
 }

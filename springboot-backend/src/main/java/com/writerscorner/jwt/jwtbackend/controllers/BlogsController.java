@@ -46,7 +46,7 @@ public class BlogsController {
         return ResponseEntity.ok(createdBlog);
     }
 
-    @GetMapping("/blog/{id}")
+    @GetMapping("/blogs/{id}")
     public ResponseEntity<Blogs> getBlog(@PathVariable long id){
         Blogs blog = blogsService.findBlogs(id);
         return ResponseEntity.ok(blog);

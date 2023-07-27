@@ -1,7 +1,7 @@
 <div class="blog-section">
   <div class="blog-container">
     <div *ngFor="let blog of blogs"  >
-      <a href="/blog/{{blog.blogId}}" class="read-more">
+      <a href="/blog/{{blog.id}}" class="read-more">
         <div class="blog-card"> 
           <h2 class="blog-title">{{blog.title}}</h2>
           <p class="blog-description">{{blog.content.slice(0,500)+"...."}}</p>

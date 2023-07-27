@@ -26,27 +26,26 @@ export class LoginComponent {
  
       const data = JSON.stringify(this.userdata)
      
-      this.http.post(this.url, data, this.headers).subscribe(data=>{
+      this.http.post<User>(this.url, data, this.headers).subscribe(data=>{
         
         console.log(data);
-        if (data)
+        localStorage.setItem("username",data.username)
+        localStorage.setItem("token","Bearer "+data.password)
+        
+        var url=localStorage.getItem("redirectUrl")
+        if(url==null)
         {
-          localStorage.setItem("username",this.userdata.username)
-          localStorage.setItem("password",this.userdata.password)
-          
-          var url=localStorage.getItem("redirectUrl")
-          if(url==null)
-          {
-            url="/home"
-          }
-          localStorage.removeItem("redirectUrl")
-          this.router.navigate([url])
+          url="/home"
         }
-        else{
-          alert("Invalid credentials")
-        }
-  
-      })
+        localStorage.removeItem("redirectUrl")
+        this.router.navigate([url])
+      
+      },
+      error=>{
+        alert("Invalid credentials")
+      }
+      
+      )
       
     }
 
