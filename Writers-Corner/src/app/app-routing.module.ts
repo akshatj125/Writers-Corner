@@ -7,6 +7,9 @@ import { BlogpageComponent } from './blogpage/blogpage.component';
 import { BlogUploadComponent } from './blog-upload/blog-upload.component';
 import { BlogsComponent } from './blogs/blogs.component';
 import { MyprofileComponent } from './myprofile/myprofile.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 
 const routes: Routes = [
 
@@ -16,7 +19,10 @@ const routes: Routes = [
   {path:"signup", component:SignupComponent},
   {path:"blog/:id",component:BlogpageComponent},
   {path:"blog-upload",component:BlogUploadComponent},
-  {path:"myprofile", component:MyprofileComponent}
+  {path:"myprofile", component:MyprofileComponent},
+  {path:"aboutUs", component:AboutUsComponent},
+  {path:"privacy", component:PrivacyComponent},
+  {path:"terms", component:TermsComponent}
 
 ]
 
@@ -33,5 +39,8 @@ export const routingComponents=[
   SignupComponent,
   BlogpageComponent,
   BlogUploadComponent,
-  MyprofileComponent
+  MyprofileComponent,
+  AboutUsComponent,
+  PrivacyComponent,
+  TermsComponent
 ]
