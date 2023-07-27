@@ -11,7 +11,7 @@ export class BlogsComponent implements OnInit{
 
 
   public blogs1:any
-  private url = "http://localhost:8080/blogs";
+  private url = "http://localhost:8080/allblogs";
 
   headers={
     headers:new HttpHeaders({

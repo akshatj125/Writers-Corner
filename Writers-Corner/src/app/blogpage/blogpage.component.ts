@@ -10,7 +10,7 @@ import { Observable } from 'rxjs';
 export class BlogpageComponent{
   
   public blog:any
-  private url = "http://127.0.0.1:8080/blogs/";
+  private url = "http://localhost:8080/blogs/";
 
   constructor(private http: HttpClient, private router:Router, private route: ActivatedRoute) { }
 
@@ -23,8 +23,9 @@ export class BlogpageComponent{
   id=0
   ngOnInit(): void {
     this.id= parseInt(this.route.snapshot.paramMap.get("id") as string)
-    this.http.get(this.url + this.id.toString(), this.headers).subscribe(data=>{
+    this.http.get<Blogs>(this.url + this.id.toString(), this.headers).subscribe(data=>{
       this.blog=data
+      console.log(this.blog)
       
     })
   }
@@ -33,5 +34,5 @@ export class BlogpageComponent{
 
 
 class Blogs{
-  constructor(public blogId:number,public title:string,public content:string,public userID:number,public datetime:string,public views:number){}
+  constructor(public blogId:number,public title:string,public content:string,public username:string,public datetime:string,public views:number){}
 }
