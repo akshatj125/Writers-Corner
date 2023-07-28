@@ -1,16 +1,26 @@
 <app-header [EnableLogin]="true" [showAddBlog] = "true"></app-header>
-<body>
+<div class="main-body">
   <div class="profile-container">
     <div class="profile-header">
       <div class="profile-image">
         <img src="../../assets/images/MyProfile.png" alt="Profile Image">
       </div>
-      <h2 class="profile-username">Akshat Jain</h2>
-      <p class="profile-email">akshatj@argusoft.com</p>
+      <h2 class="profile-username">{{user.name}}</h2>
+      <p class="profile-email">@{{user.username}}</p>
     </div>
     <div class="profile-content">
+      <div *ngIf="showBlogs" class="blog-container">
+        <div  *ngFor="let blog of blogs"  >
+          <a href="/blog/{{blog.id}}" class="read-more">
+            <div class="blog-card"> 
+              <h2 class="blog-title">{{blog.title}}</h2>
+              <p class="blog-description">{{blog.content.slice(0,500)+"...."}}</p>
+            </div>
+          </a>
+        </div>
+      </div>
     </div>
   </div>
-</body>
+  <app-footer></app-footer>
+</div>
 <!-- <app-blogs class="blogs" ></app-blogs> -->
-<app-footer></app-footer>

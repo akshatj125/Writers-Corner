@@ -6,6 +6,7 @@ import com.writerscorner.jwt.jwtbackend.services.UserService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
@@ -35,7 +36,7 @@ public class AuthController {
     }
 
     @GetMapping("/u/{username}")
-    public ResponseEntity<User> getUserDetails(@RequestBody String username){
+    public ResponseEntity<User> getUserDetails(@PathVariable String username){
         return ResponseEntity.ok(userService.restrictedFind(username));
     }
 

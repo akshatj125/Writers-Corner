@@ -62,5 +62,11 @@ public class BlogsController {
 
 
     }
+    @GetMapping("/userBlogs/{username}")
+    public ResponseEntity<List<Blogs>> blogsByusername(@PathVariable String username){
+        List<Blogs> blogsU = blogsService.findByUsername(username);
+        return ResponseEntity.ok(blogsU);
+    }
+
 
 }

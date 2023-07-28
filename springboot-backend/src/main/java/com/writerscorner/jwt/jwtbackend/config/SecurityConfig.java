@@ -29,7 +29,7 @@ public class SecurityConfig {
                 .and()
                 .authorizeHttpRequests((requests) -> requests
                         .requestMatchers(HttpMethod.POST, "/login", "/register").permitAll()
-                        .requestMatchers(HttpMethod.GET, "/allblogs","/blogs/**","/{id}").permitAll()
+                        .requestMatchers(HttpMethod.GET, "/allblogs","/blogs/**","/{id}","/u/**","/userBlogs/**").permitAll()
                         .anyRequest().authenticated())
         ;
         return http.build();

@@ -34,7 +34,11 @@ public class BlogsService {
     {
         return blogsRepository.findAll();
     }
-
+    public List<Blogs> findByUsername(String username)
+    {
+        return blogsRepository.findByUserName(username)
+            .orElseThrow(()-> new AppException("User has no Blogs", HttpStatus.NOT_FOUND));
+    }
     public Boolean deleteBlog(long id, User user) {
         Blogs blogs= blogsRepository.findById(id)
             .orElseThrow(()-> new AppException("Blog not found",HttpStatus.NOT_FOUND));
