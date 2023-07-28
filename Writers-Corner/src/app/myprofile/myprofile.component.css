@@ -1,0 +1,48 @@
+body {
+    font-family: Ubuntu;
+    margin-top: 5px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35vh;
+  }
+  
+  .profile-container {
+    width: 95%;
+    border-radius: 15px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: rgba(239,239,239, 0.5);
+  }
+  
+  .profile-header {
+    padding: 20px;
+    text-align: center;
+    
+  }
+  
+img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .profile-username {
+    margin: 10px 0;
+    color: #666;
+    font-size: 28px;
+    font-weight: bolder;
+  }
+  
+  .profile-email {
+    margin: 0;
+    color: #666;
+  }
+  
+  .profile-content {
+    padding: 20px;
+  }
+  

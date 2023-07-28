@@ -16,6 +16,10 @@ import { BlogpageComponent } from './blogpage/blogpage.component';
 import { FooterComponent } from './footer/footer.component';
 import { BlogUploadComponent } from './blog-upload/blog-upload.component';
 import { AddBlogComponent } from './add-blog/add-blog.component';
+import { MyprofileComponent } from './myprofile/myprofile.component';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { PrivacyComponent } from './privacy/privacy.component';
+import { TermsComponent } from './terms/terms.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -28,6 +32,10 @@ import { AddBlogComponent } from './add-blog/add-blog.component';
     FooterComponent,
     BlogUploadComponent,
     AddBlogComponent,
+    MyprofileComponent,
+    AboutUsComponent,
+    PrivacyComponent,
+    TermsComponent,
   ],
   imports: [
     BrowserModule,
