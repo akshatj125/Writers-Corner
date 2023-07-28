@@ -18,7 +18,7 @@ export class LoginComponent {
 
     headers={
     headers:new HttpHeaders({
-      'Content-Type':'application/json'
+      'Content-Type':'application/json',
     })
   }
 

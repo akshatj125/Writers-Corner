@@ -8,33 +8,33 @@ import { Router } from '@angular/router';
   styleUrls: ['./blog-upload.component.css']
 })
 export class BlogUploadComponent {
-  userId:0
+  
   title: string 
   content: string
 
-  private url = "http://localhost:8080/createblog";
+  private url = "http://localhost:8080/createBlog";
 
   constructor(private http: HttpClient, private router:Router){ }
  
   
-  headers={
-    headers:new HttpHeaders({
-      'Content-Type':'application/json'
-    })
-  }
+  
 
   onSubmit() {
+    var token=String(localStorage.getItem('token'))
+    var headers={
+      headers:new HttpHeaders({
+        'Content-Type':'application/json',
+        'Authorization':token
+      })
+    }
     var data={
-      userId:this.userId,
+      "userName":localStorage.getItem("username"),
       "title":this.title,
       "content":this.content
     }
 
-    this.http.post(this.url, data, this.headers).subscribe(data=>{})
+    this.http.post(this.url, data, headers).subscribe(data=>{})
     // Now you can process the data, for example, send it to a server or store it locally
-    console.log('userId:', this.userId);
-    console.log('Title:', this.title);
-    console.log('Content:', this.content);
 
     this.router.navigate(["/home"])
 }
