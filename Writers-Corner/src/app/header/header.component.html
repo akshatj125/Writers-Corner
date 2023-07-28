@@ -15,7 +15,7 @@
         <button (click)="toggleDrop()" class="dropbtn">{{username.slice(0,1).toUpperCase()}}</button>
         <div id="dropdown" class="dropdown-content">
             <button class="ddBtns">
-                <a href="/myprofile">
+                <a href="/u/{{username}}">
                     <div class="icon" style='mask:url("../../assets/images/MyProfile.png") center/contain;'></div>
                     &nbsp; &nbsp;My Profile</a>
             </button>

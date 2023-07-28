@@ -19,7 +19,7 @@ const routes: Routes = [
   {path:"signup", component:SignupComponent},
   {path:"blog/:id",component:BlogpageComponent},
   {path:"blog-upload",component:BlogUploadComponent},
-  {path:"myprofile", component:MyprofileComponent},
+  {path:"u/:username", component:MyprofileComponent},
   {path:"aboutUs", component:AboutUsComponent},
   {path:"privacy", component:PrivacyComponent},
   {path:"terms", component:TermsComponent}

@@ -26,7 +26,6 @@ export class BlogpageComponent{
     this.http.get<Blogs>(this.url + this.id.toString(), this.headers).subscribe(data=>{
       this.blog=data
       console.log(this.blog)
-      
     })
   }
 }
