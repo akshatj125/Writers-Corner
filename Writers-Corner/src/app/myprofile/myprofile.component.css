@@ -48,10 +48,7 @@ img {
     color: #666;
   }
   
-  .profile-content {
-    padding: 20px;
-  }
-  blog-container {
+  .blog-container {
     display: grid;
     padding: 2.5vh 1.5vw;
     grid-template-columns: 30vw 30vw 30vw;
@@ -93,6 +90,8 @@ img {
     font-size: 16px;
     color: #555;
     word-wrap: break-word;
+    width: 85%;
+    text-align: justify;
     font-family: 'Ubuntu';
   }
   
@@ -101,8 +100,3 @@ img {
     text-decoration: none;
   }
 
-  p{
-    width: 85%;
-    text-align: justify;
-  }
-  
